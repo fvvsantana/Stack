@@ -1,6 +1,13 @@
 #ifndef STACK_HPP
 #define STACK_HPP
 
+//#include <iostream>
+//#include <string>
+//#include <typeinfo>
+//#include <iomanip>
+//#include <new>
+//#include <stdexcept>             
+
 using namespace std;
 
 namespace adt{
@@ -8,21 +15,24 @@ namespace adt{
         class stack{
             private:
                 class Node{
-                    T& item;
-                    Node* prev;
-                }
+                    public:
+                        T& item;
+                        Node* prev;
+                };
 
-                Node* top = nullptr;
-                int size = 0;
+                Node* top;
+                int size;
 
             public:
+                stack();
+                ~stack();
                 bool isEmpty();
                 bool isFull();
                 void push(T& newItem);
                 T& pop();
-                T& top();
+                T& showTop();
                 void empty();
-        }
+        };
 
 }
 //template implementations:
