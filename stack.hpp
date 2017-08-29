@@ -29,7 +29,7 @@ namespace adt{
                 bool isEmpty();//
                 bool isFull();
                 void push(T& newItem);
-                T& pop();
+                T* pop();
                 T* showTop();//
                 void empty();//
                 int getSize();//
