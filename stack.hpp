@@ -1,15 +1,6 @@
 #ifndef STACK_HPP
 #define STACK_HPP
 
-//#include <iostream>
-//#include <string>
-//#include <typeinfo>
-//#include <iomanip>
-//#include <new>
-//#include <stdexcept>             
-
-using namespace std;
-
 namespace adt{
     template<class T>
         class stack{
@@ -24,18 +15,36 @@ namespace adt{
                 int size;
 
             public:
-                stack();//
-                ~stack();//
-                bool isEmpty();//
-                bool isFull();
-                void push(const T& newItem);
+                //constructor
+                stack();
+
+                //destructor
+                ~stack();
+
+                //empty the stack
+                void empty();
+
+                //check if the stack is empty
+                bool isEmpty();
+
+                //get the size of the stack
+                int getSize();
+
+                //show the element of the top of the stack
+                T* showTop();
+                
+                //take the first element of the stack
                 T* pop();
-                T* showTop();//
-                void empty();//
-                int getSize();//
+                
+                //put the newItem on the top of the stack
+                void push(const T& newItem);
+                
+                //check if the stack is full
+                bool isFull();
         };
 
 }
+
 //template implementations:
 #include "stackTemplates.hpp"
 #endif /* end of include guard: STACK_HPP */

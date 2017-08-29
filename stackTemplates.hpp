@@ -1,11 +1,13 @@
 namespace adt{
 
+    //constructor
     template<class T>
         stack<T> :: stack(){
             top = NULL;
             size = 0;
         }
 
+    //destructor
     template<class T>
         stack<T> :: ~stack(){
             Node* aux;
@@ -16,6 +18,7 @@ namespace adt{
             }
         }
 
+    //empty the stack
     template<class T>
         void stack<T> :: empty(){
             Node* aux;
@@ -27,16 +30,19 @@ namespace adt{
             size = 0;
         }
 
+    //check if the stack is empty
     template<class T>
         bool stack<T> :: isEmpty(){
             return top==NULL;
         }
 
+    //get the size of the stack
     template<class T>
         int stack<T> :: getSize(){
             return size;
         }
 
+    //show the element of the top of the stack
     template<class T>
         T* stack<T> :: showTop(){
             if(top){
@@ -45,6 +51,7 @@ namespace adt{
             return NULL;
         }
 
+    //take the first element of the stack
     template<class T>
         T* stack<T> :: pop(){
             if(top){
@@ -64,6 +71,7 @@ namespace adt{
             return NULL;
         }
 
+    //put the newItem on the top of the stack
     template<class T>
         void stack<T> :: push(const T& newItem){
             Node* newNode;
@@ -81,6 +89,7 @@ namespace adt{
             size++;
         }
 
+    //check if the stack is full
     template<class T>
         bool stack<T> :: isFull(){
             Node* newNode;
