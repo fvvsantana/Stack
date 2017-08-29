@@ -24,14 +24,15 @@ namespace adt{
                 int size;
 
             public:
-                stack();
-                ~stack();
-                bool isEmpty();
+                stack();//
+                ~stack();//
+                bool isEmpty();//
                 bool isFull();
                 void push(T& newItem);
                 T& pop();
-                T& showTop();
-                void empty();
+                T* showTop();//
+                void empty();//
+                int getSize();//
         };
 
 }

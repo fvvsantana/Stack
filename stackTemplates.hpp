@@ -26,4 +26,22 @@ namespace adt{
             }
             size = 0;
         }
+
+    template<class T>
+        bool stack<T> :: isEmpty(){
+            return top==NULL;
+        }
+
+    template<class T>
+        int stack<T> :: getSize(){
+            return size;
+        }
+
+    template<class T>
+        T* stack<T> :: showTop(){
+            if(top){
+                return &(top->item);
+            }
+            return NULL;
+        }
 }
