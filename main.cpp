@@ -10,15 +10,17 @@ int main(){
     cout << "isEmpty: " << s.isEmpty() << "\n";
     cout << "getSize: " << s.getSize() << "\n";
     cout << "showTop: " << s.showTop() << "\n";
-    int oito = 8;
+    cout << "isFull: " << s.isFull() << "\n";
 
-    s.push(oito);
+
+    s.push(8);
 
     cout << "push" << '\n';
 
     cout << "isEmpty: " << s.isEmpty() << "\n";
     cout << "getSize: " << s.getSize() << "\n";
     cout << "showTop: " << *(s.showTop()) << "\n";
+    cout << "isFull: " << s.isFull() << "\n";
 
     s.pop();
 
@@ -27,6 +29,7 @@ int main(){
     cout << "isEmpty: " << s.isEmpty() << "\n";
     cout << "getSize: " << s.getSize() << "\n";
     cout << "showTop: " << s.showTop() << "\n";
+    cout << "isFull: " << s.isFull() << "\n";
     
     return 0;
 }

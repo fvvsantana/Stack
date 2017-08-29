@@ -80,4 +80,16 @@ namespace adt{
             top = newNode;
             size++;
         }
+
+    template<class T>
+        bool stack<T> :: isFull(){
+            Node* newNode;
+            try{
+                newNode = new Node();
+            }catch( std::bad_alloc &ba ){
+                return true;
+            }
+            delete newNode;
+            return false;
+        }
 }
