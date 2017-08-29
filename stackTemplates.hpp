@@ -49,7 +49,7 @@ namespace adt{
         T* stack<T> :: pop(){
             if(top){
                 //save the item
-                T* item = &(top->item);
+                T* pItem = &(top->item);
                 //save the node to destroy
                 Node* oldTop = top;
                 //update the top
@@ -59,10 +59,25 @@ namespace adt{
                 //update size
                 size--;
                 //return the item
-                return item;
+                return pItem;
             }
             return NULL;
         }
 
+    template<class T>
+        void stack<T> :: push(const T& newItem){
+            Node* newNode;
+            try{
+                newNode = new Node();
+            }catch( std::bad_alloc &ba ){
+                throw ba;
+            }
+            //setup node
+            newNode->prev = top;
+            newNode->item = newItem;
 
+            //setup stack
+            top = newNode;
+            size++;
+        }
 }

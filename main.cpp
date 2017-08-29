@@ -7,10 +7,26 @@ int main(){
     adt::stack<int> s;
 
     //testing initial conditions:
-    cout << s.isEmpty() << "\n";
-    cout << s.getSize() << "\n";
-    cout << s.showTop() << "\n";
+    cout << "isEmpty: " << s.isEmpty() << "\n";
+    cout << "getSize: " << s.getSize() << "\n";
+    cout << "showTop: " << s.showTop() << "\n";
+    int oito = 8;
 
+    s.push(oito);
+
+    cout << "push" << '\n';
+
+    cout << "isEmpty: " << s.isEmpty() << "\n";
+    cout << "getSize: " << s.getSize() << "\n";
+    cout << "showTop: " << *(s.showTop()) << "\n";
+
+    s.pop();
+
+    cout << "hello" << '\n';
+
+    cout << "isEmpty: " << s.isEmpty() << "\n";
+    cout << "getSize: " << s.getSize() << "\n";
+    cout << "showTop: " << s.showTop() << "\n";
     
     return 0;
 }

@@ -16,7 +16,7 @@ namespace adt{
             private:
                 class Node{
                     public:
-                        T& item;
+                        T item;
                         Node* prev;
                 };
 
@@ -28,7 +28,7 @@ namespace adt{
                 ~stack();//
                 bool isEmpty();//
                 bool isFull();
-                void push(T& newItem);
+                void push(const T& newItem);
                 T* pop();
                 T* showTop();//
                 void empty();//
